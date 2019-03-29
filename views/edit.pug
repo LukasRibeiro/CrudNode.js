@@ -12,17 +12,17 @@ html
 			.col-md-6
 				form.form-group(action='/cadastro/update', method='post')
 					
-					for neguinho in petecas
+					for pessoa in petecas
 						
 						h1.mt-3.mb-3 Editar
 						|         Nome: 
-						input.form-control(type='hidden', name='id', value=neguinho._id)
-						input.mb-1.form-control(type='text', name='nome', value=neguinho.nome)
+						input.form-control(type='hidden', name='id', value=pessoa._id)
+						input.mb-1.form-control(type='text', name='nome', value=pessoa.nome)
 						|         Idade: 
-						input.mb-3.form-control(type='text', name='idade', value=neguinho.idade)
+						input.mb-3.form-control(type='text', name='idade', value=pessoa.idade)
 						input.mr-1.btn.btn-primary(type='submit', value='Editar')
 						a.mr-1.btn.btn-primary(href="/") Voltar
-						a.btn.btn-danger(href="/cadastro/delete/"+neguinho._id) Deletar
+						a.btn.btn-danger(href="/cadastro/delete/"+pessoa._id) Deletar
 
 
           
